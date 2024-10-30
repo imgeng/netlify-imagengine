@@ -44,7 +44,7 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@netlify/build": "^26.5.3",
+    "@netlify/build": "^29.56.0",
     "ava": "^4.0.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.32.0",
