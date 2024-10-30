@@ -4,7 +4,7 @@ The Netlify ImageEngine plugin optimizes your images by up to 80% on autopilot,
 enhancing SEO, reducing bounce rates, improving mobile experiences, and boosting
 sales.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=https://github.com/AdityaKantipudi1/plugin-demo)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=https://github.com/AdityaKantipudi1/plugin-example)
 
 ## Installation
 
