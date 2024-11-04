@@ -10,10 +10,10 @@ sales.
 
 Install this plugin from Netlify.
 
-NPM :
-```npm i netlify-plugin-imageengine```
+NPM : `npm i netlify-plugin-imageengine`
 
 ## example netlify.toml
+
 ```
 [[plugins]]
 package = "netlify-plugin-imageengine"
