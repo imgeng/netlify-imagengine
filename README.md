@@ -69,6 +69,10 @@ This function takes HTML content and options, then updates image URLs to use
 ImageEngine for optimization. It handles both `src` and `srcset` attributes,
 ensuring all images are optimized.
 
+### `processBundle`
+
+This function processes JavaScript bundle content, replacing image URLs with optimized ImageEngine URLs. It uses regular expressions to identify image URLs and applies the `transformSrcURL` and `build_IE_url` functions to generate the optimized URLs. This ensures that all images in the JavaScript bundles are optimized for better performance and quality.
+
 ### `transformSrcURL`
 
 This function transforms original image URLs to use the ImageEngine delivery
