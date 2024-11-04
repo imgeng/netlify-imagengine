@@ -19,13 +19,12 @@ const tempPath2 = path.join(mocksPath, 'temp_srcset')
 
 
 async function mkdir(directoryPath) {
-  let dir;
-  console.log('directoryPath', directoryPath)
   try {
-    dir = await fs.stat(directoryPath);
-  } catch(e) {}
-  if ( dir && dir.isDirectory() ) return;
-  await fs.mkdir(directoryPath);
+    await fs.rm(directoryPath, { recursive: true, force: true })
+    await fs.mkdir(directoryPath)
+  } catch(e) {
+    console.error('mkdir error:', e)
+  }
 }
 
 test('Netlify Build should not fail', async (t) => {
@@ -174,4 +173,56 @@ test('isRemoteURL correctly identifies remote and non-remote URLs', t => {
   t.true(isRemoteURL('//example.com/image.jpg'));
   t.false(isRemoteURL('/images/local.jpg'));
   t.false(isRemoteURL('images/local.jpg'));
+});
+
+test('Netlify Build should transform all image URLs in JS bundles', async (t) => {
+  const mockJsContent = `
+    // Different URL patterns
+    const images = {
+      logo: '/brand/logo.png',
+      banner: 'https://example.com/hero.jpg',
+      profile: '//cdn.site.com/user.webp',
+      avatar: '/static/img.avif',
+      background: 'assets/bg.jpeg',
+      gallery: [
+        'https://photos.com/1.gif',
+        '/uploads/2.png',
+        'content/3.jpg'
+      ]
+    };
+    
+    // JSX-like patterns
+    render(<img src="/any/path/photo.jpg" />);
+    const bg = { backgroundImage: "url('/random/image.webp')" };
+  `;
+
+  await mkdir(tempPath);
+  await fs.writeFile(path.join(tempPath, 'bundle.js'), mockJsContent);
+
+  const deliveryAddress = "test.imageengine.io";
+  await onPostBuild({
+    constants: { PUBLISH_DIR: tempPath },
+    inputs: { deliveryAddress }
+  });
+
+  const processedJs = await fs.readFile(path.join(tempPath, 'bundle.js'), 'utf-8');
+  
+  // Debug output
+  console.log('Processed Content:', processedJs);
+  console.log('Expected:', '//test.imageengine.io/brand/logo.png');
+  console.log('Contains?:', processedJs.includes('//test.imageengine.io/brand/logo.png'));
+  
+  // Test all patterns
+  t.true(processedJs.includes('//test.imageengine.io/brand/logo.png'));
+  t.true(processedJs.includes('https://test.imageengine.io/hero.jpg'));
+  t.true(processedJs.includes('//test.imageengine.io/user.webp'));
+  t.true(processedJs.includes('//test.imageengine.io/static/img.avif'));
+  t.true(processedJs.includes('//test.imageengine.io/assets/bg.jpeg'));
+  t.true(processedJs.includes('https://test.imageengine.io/1.gif'));
+  t.true(processedJs.includes('//test.imageengine.io/uploads/2.png'));
+  t.true(processedJs.includes('//test.imageengine.io/content/3.jpg'));
+  t.true(processedJs.includes('//test.imageengine.io/any/path/photo.jpg'));
+  t.true(processedJs.includes('//test.imageengine.io/random/image.webp'));
+
+  await fs.rm(tempPath, { recursive: true, force: true });
 });
