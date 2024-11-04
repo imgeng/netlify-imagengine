@@ -7,7 +7,10 @@ import {
   ERROR_NETLIFY_HOST_UNKNOWN,
   ERROR_DELIVERY_ADDRESS_REQUIRED,
 } from './lib/errors.js'
-import { updateHtmlImagesToImageEngine } from './lib/imageengine.js'
+import {
+  updateHtmlImagesToImageEngine,
+  processBundle,
+} from './lib/imageengine.js'
 
 export async function onPostBuild({ constants, inputs, utils }) {
   console.log('[ImageEngine] Replacing on-page images with ImageEngine URLs...')
@@ -31,7 +34,7 @@ export async function onPostBuild({ constants, inputs, utils }) {
   const { deliveryAddress, directives } = inputs
   const { PUBLISH_DIR } = constants
 
-  console.log(`[ImageEngine] PUBLISH_DIR: ${PUBLISH_DIR}`);
+  console.log(`[ImageEngine] PUBLISH_DIR: ${PUBLISH_DIR}`)
 
   if (!PUBLISH_DIR) {
     console.error(`[ImageEngine] ${ERROR_INVALID_PUBLISH_DIRECTORY}`)
@@ -44,23 +47,30 @@ export async function onPostBuild({ constants, inputs, utils }) {
     utils.build.failPlugin(ERROR_DELIVERY_ADDRESS_REQUIRED)
     return
   }
-  // Find all HTML source files in the publish directory
 
-  const pages = glob.sync(`${PUBLISH_DIR}/**/*.html`)
+  const files = glob.sync([
+    `${PUBLISH_DIR}/**/*.html`,
+    `${PUBLISH_DIR}/**/*.js`,
+  ])
+
   const results = await Promise.all(
-    pages.map(async (page) => {
-      const sourceHtml = await fs.readFile(page, 'utf-8')
+    files.map(async (file) => {
+      const content = await fs.readFile(file, 'utf-8')
 
-      const { html, errors } = await updateHtmlImagesToImageEngine(sourceHtml, {
-        deliveryAddress,
-        directives,
-      })
-
-      await fs.writeFile(page, html)
-
-      return {
-        page,
-        errors,
+      if (file.endsWith('.html')) {
+        const { html, errors } = await updateHtmlImagesToImageEngine(content, {
+          deliveryAddress,
+          directives,
+        })
+        await fs.writeFile(file, html)
+        return { file, errors }
+      } else {
+        const processed = processBundle(content, {
+          deliveryAddress,
+          directives,
+        })
+        await fs.writeFile(file, processed)
+        return { file, errors: [] }
       }
     }),
   )
