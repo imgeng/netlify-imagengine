@@ -200,9 +200,15 @@ test('Netlify Build should transform all image URLs in JS bundles', async (t) =>
   await fs.writeFile(path.join(tempPath, 'bundle.js'), mockJsContent);
 
   const deliveryAddress = "test.imageengine.io";
+  const directives = {
+    height: 400,
+    width: 800,
+    compression: 80
+  };
+  
   await onPostBuild({
     constants: { PUBLISH_DIR: tempPath },
-    inputs: { deliveryAddress }
+    inputs: { deliveryAddress, directives }
   });
 
   const processedJs = await fs.readFile(path.join(tempPath, 'bundle.js'), 'utf-8');
@@ -212,17 +218,17 @@ test('Netlify Build should transform all image URLs in JS bundles', async (t) =>
   console.log('Expected:', '//test.imageengine.io/brand/logo.png');
   console.log('Contains?:', processedJs.includes('//test.imageengine.io/brand/logo.png'));
   
-  // Test all patterns
-  t.true(processedJs.includes('//test.imageengine.io/brand/logo.png'));
-  t.true(processedJs.includes('https://test.imageengine.io/hero.jpg'));
-  t.true(processedJs.includes('//test.imageengine.io/user.webp'));
-  t.true(processedJs.includes('//test.imageengine.io/static/img.avif'));
-  t.true(processedJs.includes('//test.imageengine.io/assets/bg.jpeg'));
-  t.true(processedJs.includes('https://test.imageengine.io/1.gif'));
-  t.true(processedJs.includes('//test.imageengine.io/uploads/2.png'));
-  t.true(processedJs.includes('//test.imageengine.io/content/3.jpg'));
-  t.true(processedJs.includes('//test.imageengine.io/any/path/photo.jpg'));
-  t.true(processedJs.includes('//test.imageengine.io/random/image.webp'));
+  // Test all patterns with directives
+  t.true(processedJs.includes('//test.imageengine.io/brand/logo.png?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('https://test.imageengine.io/hero.jpg?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/user.webp?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/static/img.avif?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/assets/bg.jpeg?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('https://test.imageengine.io/1.gif?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/uploads/2.png?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/content/3.jpg?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/any/path/photo.jpg?imgeng=/h_400/w_800/cmpr_80'));
+  t.true(processedJs.includes('//test.imageengine.io/random/image.webp?imgeng=/h_400/w_800/cmpr_80'));
 
   await fs.rm(tempPath, { recursive: true, force: true });
 });
