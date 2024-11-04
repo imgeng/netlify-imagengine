@@ -42,6 +42,20 @@ export async function updateHtmlImagesToImageEngine(html, options) {
   }
 }
 
+// Process any valid image URL pattern
+export function processBundle(content, options) {
+  const { deliveryAddress, directives } = options
+  return content.replace(
+    /(["'])((?:https?:\/\/)?[^"']+)(\.(?:jpg|jpeg|png|gif|webp|avif))(["'])/gi,
+    (_, q1, path, ext, q2) => {
+      let transformedSrc = transformSrcURL(path + ext, deliveryAddress)
+      let ie_directives = directives != null ? directives : []
+      let ieURL = build_IE_url(transformedSrc, ie_directives)
+      return q1 + ieURL + q2
+    },
+  )
+}
+
 export function transformSrcURL(orgURL, deliveryAddress) {
   let finalSrc = ''
 
