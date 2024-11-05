@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-imageengine",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Netlify Build plugin - Imageengine optimize your images by up to 80% on autopilot for improved SEO, lower bounce rates, better mobile experience, and increased sales",
   "type": "module",
   "exports": "./src/index.js",
