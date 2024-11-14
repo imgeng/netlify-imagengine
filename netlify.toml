@@ -7,6 +7,7 @@
 [build]
 # Dummy build command
 command = "echo onBuild"
+publish = "/"
 
 [build.environment]
 NODE_VERSION = "16.9.0"
