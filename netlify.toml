@@ -9,4 +9,4 @@
 command = "echo onBuild"
 
 [build.environment]
-NODE_VERSION = "14.14.0"
+NODE_VERSION = "16.9.0"
