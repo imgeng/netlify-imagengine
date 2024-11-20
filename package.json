@@ -67,5 +67,8 @@
     "@imageengine/imageengine-helpers": "^0.2.1",
     "glob": "^10.3.12",
     "jsdom": "^24.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
