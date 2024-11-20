@@ -90,4 +90,3 @@ address. It handles different types of URLs:
 
 It ensures that the final URL is correctly formatted and ready for ImageEngine
 processing.
-

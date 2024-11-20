@@ -1,4 +1,4 @@
-name: "publish to npm registry"
+name: 'publish to npm registry'
 
 on:
   release:
@@ -14,10 +14,10 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: ">=16.9.0"
+          node-version: '>=16.9.0'
           cache: 'pnpm'
       - run: pnpm install
-      - run: pnpm build     # Added back the build step
+      - run: pnpm build # Added back the build step
       - run: pnpm test
       - run: pnpm publish --access public
         env:
