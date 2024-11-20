@@ -1,4 +1,4 @@
-name: 'netlify-plugin-imageengine'
+name: '@imageengine/netlify'
 inputs:
   - name: deliveryAddress
     required: false
