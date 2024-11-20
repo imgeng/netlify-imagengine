@@ -10,13 +10,13 @@ sales.
 
 Install this plugin from Netlify.
 
-NPM : `npm i netlify-plugin-imageengine`
+NPM : `pnpm i @imageengine/netlify`
 
 ## example netlify.toml
 
 ```
 [[plugins]]
-package = "netlify-plugin-imageengine"
+package = "@imageengine/netlify"
 
   [plugins.inputs]
   deliveryAddress = "blazing-fast-pics.cdn.imgeng.in"
