@@ -60,7 +60,7 @@
     "execa": "^9.0.0",
     "globals": "^15.12.0",
     "netlify-cli": "^17.0.0",
-    "prettier": "^2.1.2",
+    "prettier": "^3.0.0",
     "release-it": "^15.0.0"
   },
   "dependencies": {
