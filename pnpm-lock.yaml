@@ -29,7 +29,7 @@ importers:
         version: 9.17.0
       '@netlify/build':
         specifier: ^29.0.0
-        version: 29.58.0(@opentelemetry/api@1.8.0)(@types/node@22.10.2)(picomatch@4.0.2)
+        version: 29.58.1(@opentelemetry/api@1.8.0)(@types/node@22.10.2)(picomatch@4.0.2)
       ava:
         specifier: ^6.0.0
         version: 6.2.0
@@ -568,12 +568,28 @@ packages:
       '@netlify/opentelemetry-sdk-setup':
         optional: true
 
+  '@netlify/build@29.58.1':
+    resolution: {integrity: sha512-z9xKi8saEypU1XVHmGYIubkmMlLp9BY273vUSxle36PTdfw3xWu1DLw7mqPc16mYNZjOmJElyETvF9B5YZ/eMA==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@netlify/opentelemetry-sdk-setup': ^1.1.0
+      '@opentelemetry/api': ~1.8.0
+    peerDependenciesMeta:
+      '@netlify/opentelemetry-sdk-setup':
+        optional: true
+
   '@netlify/cache-utils@5.2.0':
     resolution: {integrity: sha512-kKzGQ9gKNRUjqFMC1/1goeTe1WfzL6KhphwXac7tialowg10Dtmr2X+eDzfH9enGvD6vhYR4a0QMTQWkjfPVmg==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
   '@netlify/config@20.21.0':
     resolution: {integrity: sha512-3t2IcYcaGIYagESXK7p4I0GOahlTxhR/UCgRdNKkv0ihIgYLW4CEmZXGHytyXYU55Ismbyt5W7EJ+Qi4fVy6VA==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+    hasBin: true
+
+  '@netlify/config@20.21.1':
+    resolution: {integrity: sha512-fdSkuyuVZNyMAcocTT0M1rXce0ccj8Z1a8xRKvBV8BxqQg3Ds+Zcx9ioHUtjc75xk+CLHl+nYZDoKv9zUHO2ZQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
 
@@ -1498,6 +1514,10 @@ packages:
 
   chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  chalk@5.4.0:
+    resolution: {integrity: sha512-ZkD35Mx92acjB2yNJgziGqT9oKHEOxjTBTDRpOsRWtdecL/0jM3z5kM/CTzHWvHIen1GvkM85p6TuFfDGfc8/Q==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chardet@0.7.0:
@@ -4390,8 +4410,8 @@ packages:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
     engines: {node: '>= 6'}
 
-  readable-stream@4.5.2:
-    resolution: {integrity: sha512-yjavECdqeZ3GLXNgRXgeQEdz9fvDDkNKyHnbHRFtOr7/LcfgBcmct7t/ET+HaCTqfh06OzoAxrkN/IfjJBVe+g==}
+  readable-stream@4.6.0:
+    resolution: {integrity: sha512-cbAdYt0VcnpN2Bekq7PU+k363ZRsPwJoEEJOEtSJQlJXzwaxt3FIo/uL+KeDSGIjJqtkwyge4KQgD2S2kd+CQw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
   readable-web-to-node-stream@3.0.2:
@@ -4469,12 +4489,13 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  resolve@1.22.8:
-    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
+  resolve@1.22.10:
+    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+    engines: {node: '>= 0.4'}
     hasBin: true
 
-  resolve@1.22.9:
-    resolution: {integrity: sha512-QxrmX1DzraFIi9PxdG5VkRfRwIgjwyud+z/iBwfRRrVmHc+P9Q7u2lSSpQ6bjr2gy5lrqIiU9vb6iAeGf2400A==}
+  resolve@1.22.8:
+    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
 
   resolve@2.0.0-next.5:
@@ -5477,6 +5498,9 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
 snapshots:
 
   '@babel/code-frame@7.12.11':
@@ -5710,7 +5734,7 @@ snapshots:
   '@eslint/config-array@0.19.1':
     dependencies:
       '@eslint/object-schema': 2.1.5
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -5929,6 +5953,75 @@ snapshots:
       - picomatch
       - rollup
 
+  '@netlify/build@29.58.1(@opentelemetry/api@1.8.0)(@types/node@22.10.2)(picomatch@4.0.2)':
+    dependencies:
+      '@bugsnag/js': 7.25.0
+      '@netlify/blobs': 7.4.0
+      '@netlify/cache-utils': 5.2.0
+      '@netlify/config': 20.21.1
+      '@netlify/edge-bundler': 12.3.1(supports-color@9.4.0)
+      '@netlify/framework-info': 9.9.0
+      '@netlify/functions-utils': 5.3.1(supports-color@9.4.0)
+      '@netlify/git-utils': 5.2.0
+      '@netlify/opentelemetry-utils': 1.3.0(@opentelemetry/api@1.8.0)
+      '@netlify/plugins-list': 6.80.0
+      '@netlify/run-utils': 5.2.0
+      '@netlify/zip-it-and-ship-it': 9.42.1(supports-color@9.4.0)
+      '@opentelemetry/api': 1.8.0
+      '@sindresorhus/slugify': 2.2.1
+      ansi-escapes: 6.2.1
+      chalk: 5.4.0
+      clean-stack: 4.2.0
+      execa: 6.1.0
+      fdir: 6.4.2(picomatch@4.0.2)
+      figures: 5.0.0
+      filter-obj: 5.1.0
+      got: 12.6.1
+      hot-shots: 10.2.1
+      indent-string: 5.0.0
+      is-plain-obj: 4.1.0
+      js-yaml: 4.1.0
+      keep-func-props: 4.0.1
+      locate-path: 7.2.0
+      log-process-errors: 8.0.0
+      map-obj: 5.0.2
+      memoize-one: 6.0.0
+      minimatch: 9.0.5
+      node-fetch: 3.3.2
+      os-name: 5.1.0
+      p-event: 5.0.1
+      p-every: 2.0.0
+      p-filter: 3.0.0
+      p-locate: 6.0.0
+      p-map: 6.0.0
+      p-reduce: 3.0.0
+      path-exists: 5.0.0
+      path-type: 5.0.0
+      pkg-dir: 7.0.0
+      pretty-ms: 8.0.0
+      ps-list: 8.1.1
+      read-package-up: 11.0.0
+      readdirp: 3.6.0
+      resolve: 2.0.0-next.5
+      rfdc: 1.4.1
+      safe-json-stringify: 1.2.0
+      semver: 7.6.3
+      string-width: 5.1.2
+      strip-ansi: 7.1.0
+      supports-color: 9.4.0
+      terminal-link: 3.0.0
+      ts-node: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
+      typescript: 5.7.2
+      uuid: 9.0.1
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - picomatch
+      - rollup
+
   '@netlify/cache-utils@5.2.0':
     dependencies:
       cpy: 9.0.1
@@ -5946,6 +6039,33 @@ snapshots:
       '@netlify/headers-parser': 7.3.0
       '@netlify/redirect-parser': 14.5.0
       chalk: 5.3.0
+      cron-parser: 4.9.0
+      deepmerge: 4.3.1
+      dot-prop: 7.2.0
+      execa: 6.1.0
+      fast-safe-stringify: 2.1.1
+      figures: 5.0.0
+      filter-obj: 5.1.0
+      find-up: 6.3.0
+      indent-string: 5.0.0
+      is-plain-obj: 4.1.0
+      js-yaml: 4.1.0
+      map-obj: 5.0.2
+      netlify: 13.2.0
+      node-fetch: 3.3.2
+      omit.js: 2.0.2
+      p-locate: 6.0.0
+      path-type: 5.0.0
+      tomlify-j0.4: 3.0.0
+      validate-npm-package-name: 4.0.0
+      yargs: 17.7.2
+
+  '@netlify/config@20.21.1':
+    dependencies:
+      '@iarna/toml': 2.2.5
+      '@netlify/headers-parser': 7.3.0
+      '@netlify/redirect-parser': 14.5.0
+      chalk: 5.4.0
       cron-parser: 4.9.0
       deepmerge: 4.3.1
       dot-prop: 7.2.0
@@ -6152,7 +6272,7 @@ snapshots:
       unixify: 1.0.0
       urlpattern-polyfill: 8.0.2
       yargs: 17.7.2
-      zod: 3.23.8
+      zod: 3.24.1
     transitivePeerDependencies:
       - encoding
       - rollup
@@ -6414,7 +6534,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.6.3
@@ -6554,7 +6674,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6661,14 +6781,14 @@ snapshots:
       lazystream: 1.0.1
       lodash: 4.17.21
       normalize-path: 3.0.0
-      readable-stream: 4.5.2
+      readable-stream: 4.6.0
 
   archiver@7.0.1:
     dependencies:
       archiver-utils: 5.0.2
       async: 3.2.6
       buffer-crc32: 1.0.0
-      readable-stream: 4.5.2
+      readable-stream: 4.6.0
       readdir-glob: 1.1.3
       tar-stream: 3.1.7
       zip-stream: 6.0.1
@@ -7039,6 +7159,8 @@ snapshots:
 
   chalk@5.3.0: {}
 
+  chalk@5.4.0: {}
+
   chardet@0.7.0: {}
 
   chokidar@3.6.0:
@@ -7159,7 +7281,7 @@ snapshots:
 
   colors-option@3.0.0:
     dependencies:
-      chalk: 5.3.0
+      chalk: 5.4.0
       filter-obj: 3.0.0
       is-plain-obj: 4.1.0
       jest-validate: 27.5.1
@@ -7204,7 +7326,7 @@ snapshots:
       crc32-stream: 6.0.0
       is-stream: 2.0.1
       normalize-path: 3.0.0
-      readable-stream: 4.5.2
+      readable-stream: 4.6.0
 
   concat-map@0.0.1: {}
 
@@ -7301,7 +7423,7 @@ snapshots:
   crc32-stream@6.0.0:
     dependencies:
       crc-32: 1.2.2
-      readable-stream: 4.5.2
+      readable-stream: 4.6.0
 
   create-require@1.1.1: {}
 
@@ -7414,9 +7536,11 @@ snapshots:
     optionalDependencies:
       supports-color: 9.4.0
 
-  debug@4.4.0:
+  debug@4.4.0(supports-color@9.4.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 9.4.0
 
   decache@4.6.2:
     dependencies:
@@ -7898,7 +8022,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 8.2.0
       eslint-visitor-keys: 4.2.0
@@ -8429,7 +8553,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
@@ -8659,7 +8783,7 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8705,7 +8829,7 @@ snapshots:
   https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9974,7 +10098,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
@@ -10219,7 +10343,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       lru-cache: 7.18.3
@@ -10326,7 +10450,7 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
-  readable-stream@4.5.2:
+  readable-stream@4.6.0:
     dependencies:
       abort-controller: 3.0.0
       buffer: 6.0.3
@@ -10350,7 +10474,7 @@ snapshots:
 
   rechoir@0.6.2:
     dependencies:
-      resolve: 1.22.9
+      resolve: 1.22.10
 
   regexp.prototype.flags@1.5.3:
     dependencies:
@@ -10421,15 +10545,15 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  resolve@1.22.8:
+  resolve@1.22.10:
     dependencies:
-      is-core-module: 2.15.1
+      is-core-module: 2.16.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resolve@1.22.9:
+  resolve@1.22.8:
     dependencies:
-      is-core-module: 2.16.0
+      is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -10672,7 +10796,7 @@ snapshots:
   socks-proxy-agent@8.0.4:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
@@ -11459,6 +11583,8 @@ snapshots:
     dependencies:
       archiver-utils: 5.0.2
       compress-commons: 6.0.2
-      readable-stream: 4.5.2
+      readable-stream: 4.6.0
 
   zod@3.23.8: {}
+
+  zod@3.24.1: {}
