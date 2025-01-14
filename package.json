@@ -51,7 +51,7 @@
     "ava": "^6.0.0",
     "cross-env": "^7.0.2",
     "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
     "eslint-formatter-codeframe": "^7.32.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-n": "^17.0.0",
