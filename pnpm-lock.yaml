@@ -29,7 +29,7 @@ importers:
         version: 9.19.0
       '@netlify/build':
         specifier: ^29.0.0
-        version: 29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.12.0)(picomatch@4.0.2)
+        version: 29.58.9(@opentelemetry/api@1.8.0)(@types/node@22.13.1)(picomatch@4.0.2)
       ava:
         specifier: ^6.0.0
         version: 6.2.0
@@ -62,13 +62,13 @@ importers:
         version: 15.14.0
       netlify-cli:
         specifier: ^18.0.0
-        version: 18.0.1(@types/node@22.12.0)(picomatch@4.0.2)
+        version: 18.0.1(@types/node@22.13.1)(picomatch@4.0.2)
       prettier:
         specifier: ^3.0.0
         version: 3.4.2
       release-it:
         specifier: ^18.0.0
-        version: 18.1.2(@types/node@22.12.0)(typescript@5.7.3)
+        version: 18.1.2(@types/node@22.13.1)(typescript@5.7.3)
 
 packages:
 
@@ -688,8 +688,8 @@ packages:
       '@netlify/opentelemetry-sdk-setup':
         optional: true
 
-  '@netlify/build@29.58.8':
-    resolution: {integrity: sha512-WzdZ8QJ5Z3aFGlWAGcQQ+JawsE8S2NcpxISlDkPQz6BSpF/8W/MwtA/N55MPelZLopZPj25f86+oYKmQAOUX0g==}
+  '@netlify/build@29.58.9':
+    resolution: {integrity: sha512-tu45eh8izdyRlzRfxTSQ8J6oYrGMni77PZRP4Ks8tlBA8Hy81NGB/TptMYAVRSEYbvCyozNhgRFhacqEgpK/8A==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -728,8 +728,8 @@ packages:
     resolution: {integrity: sha512-IAqIA3w+a+fnDeR5GwRQY1T3f5THtFByRVbLrK79nt+CY131h9csBQQco6YsV1hSjCu8EODHDIIBfpvdBcsTzQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
-  '@netlify/functions-utils@5.3.4':
-    resolution: {integrity: sha512-E2yiHrH8FSujvGGg8PvuOQ3EPRH86f7r5v8IHNigatZvldrcxeGqiEhep842B8zzTBtYXakrTb8dywp0x2O1dg==}
+  '@netlify/functions-utils@5.3.5':
+    resolution: {integrity: sha512-wKZBMvKGuAeQ0G02q+Rpb4ZQh6CXqkNurdGCFVAKOdxPcmivb+CIUmCMcmsc+NDxWdjzZ4yxGla1x+Q3IkaAOw==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
   '@netlify/git-utils@5.2.0':
@@ -849,13 +849,17 @@ packages:
     resolution: {integrity: sha512-dRKNGox2wdKb8ONoMc4mtLyUSxYvCYDFM1iyJUCb+9Nit9Azvtr8htD9D8z9bH1L4MKraHJJE756OSfLL3jduQ==}
     engines: {node: '>=18.0.0'}
 
+  '@netlify/serverless-functions-api@1.33.0':
+    resolution: {integrity: sha512-il9HUEC5Nu+6l7vJR2vvolJ12SuI/Yo6K8ZoAKHx7RkMGzS0LHcopDW2pIVRTP8I3vQBxvzuof3FUfqLdAiXhw==}
+    engines: {node: '>=18.0.0'}
+
   '@netlify/zip-it-and-ship-it@9.42.2':
     resolution: {integrity: sha512-2J+Nc2XkTmcb0Q3D/Mk+wmMUS6VVyLaIyn+A/GET6sKG+FSTJkH2mzgPfCUSIfSb+yae/ll8FYyH7Ym//6F/bA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
 
-  '@netlify/zip-it-and-ship-it@9.42.4':
-    resolution: {integrity: sha512-Oj3c8GR52H6yWjkP5EjLRP0bxGyx8UjrB0WYWF0bzFY+nTaeMBmqtmO8eGl/jgto7Jus6NaCmHYMUmT3ybjBRA==}
+  '@netlify/zip-it-and-ship-it@9.42.5':
+    resolution: {integrity: sha512-Z9nhchO9ZdqFpAVT6+cQMNAyt+MdhAalK4mCmCAe88YflHzZ0x8npevnZxtN4tytbW9nF4mywRMlP04BWOl5Ig==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
 
@@ -1173,8 +1177,8 @@ packages:
   '@types/node@22.10.7':
     resolution: {integrity: sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==}
 
-  '@types/node@22.12.0':
-    resolution: {integrity: sha512-Fll2FZ1riMjNmlmJOdAyY5pUbkftXslB5DgEzlIuNaiWhXd00FhWxVC/r4yV/4wBb9JfImTu+jiSvXTkJ7F/gA==}
+  '@types/node@22.13.1':
+    resolution: {integrity: sha512-jK8uzQlrvXqEU91UxiK5J7pKHyzgnI1Qnl0QDHIgVGuolJhRb9EEl28Cj9b3rGR8B2lhFCtvIm5os8lFnO/1Ew==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -4778,6 +4782,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   send@0.19.0:
     resolution: {integrity: sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==}
     engines: {node: '>= 0.8.0'}
@@ -6057,25 +6066,25 @@ snapshots:
 
   '@import-maps/resolve@1.0.1': {}
 
-  '@inquirer/checkbox@4.0.6(@types/node@22.12.0)':
+  '@inquirer/checkbox@4.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
       '@inquirer/figures': 1.0.9
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
 
-  '@inquirer/confirm@5.1.3(@types/node@22.12.0)':
+  '@inquirer/confirm@5.1.3(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
 
-  '@inquirer/core@10.1.4(@types/node@22.12.0)':
+  '@inquirer/core@10.1.4(@types/node@22.13.1)':
     dependencies:
       '@inquirer/figures': 1.0.9
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -6086,82 +6095,82 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@inquirer/editor@4.2.3(@types/node@22.12.0)':
+  '@inquirer/editor@4.2.3(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       external-editor: 3.1.0
 
-  '@inquirer/expand@4.0.6(@types/node@22.12.0)':
+  '@inquirer/expand@4.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       yoctocolors-cjs: 2.1.2
 
   '@inquirer/figures@1.0.9': {}
 
-  '@inquirer/input@4.1.3(@types/node@22.12.0)':
+  '@inquirer/input@4.1.3(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
 
-  '@inquirer/number@3.0.6(@types/node@22.12.0)':
+  '@inquirer/number@3.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
 
-  '@inquirer/password@4.0.6(@types/node@22.12.0)':
+  '@inquirer/password@4.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       ansi-escapes: 4.3.2
 
-  '@inquirer/prompts@7.2.3(@types/node@22.12.0)':
+  '@inquirer/prompts@7.2.3(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/checkbox': 4.0.6(@types/node@22.12.0)
-      '@inquirer/confirm': 5.1.3(@types/node@22.12.0)
-      '@inquirer/editor': 4.2.3(@types/node@22.12.0)
-      '@inquirer/expand': 4.0.6(@types/node@22.12.0)
-      '@inquirer/input': 4.1.3(@types/node@22.12.0)
-      '@inquirer/number': 3.0.6(@types/node@22.12.0)
-      '@inquirer/password': 4.0.6(@types/node@22.12.0)
-      '@inquirer/rawlist': 4.0.6(@types/node@22.12.0)
-      '@inquirer/search': 3.0.6(@types/node@22.12.0)
-      '@inquirer/select': 4.0.6(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/checkbox': 4.0.6(@types/node@22.13.1)
+      '@inquirer/confirm': 5.1.3(@types/node@22.13.1)
+      '@inquirer/editor': 4.2.3(@types/node@22.13.1)
+      '@inquirer/expand': 4.0.6(@types/node@22.13.1)
+      '@inquirer/input': 4.1.3(@types/node@22.13.1)
+      '@inquirer/number': 3.0.6(@types/node@22.13.1)
+      '@inquirer/password': 4.0.6(@types/node@22.13.1)
+      '@inquirer/rawlist': 4.0.6(@types/node@22.13.1)
+      '@inquirer/search': 3.0.6(@types/node@22.13.1)
+      '@inquirer/select': 4.0.6(@types/node@22.13.1)
+      '@types/node': 22.13.1
 
-  '@inquirer/rawlist@4.0.6(@types/node@22.12.0)':
+  '@inquirer/rawlist@4.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       yoctocolors-cjs: 2.1.2
 
-  '@inquirer/search@3.0.6(@types/node@22.12.0)':
+  '@inquirer/search@3.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
       '@inquirer/figures': 1.0.9
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       yoctocolors-cjs: 2.1.2
 
-  '@inquirer/select@4.0.6(@types/node@22.12.0)':
+  '@inquirer/select@4.0.6(@types/node@22.13.1)':
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
       '@inquirer/figures': 1.0.9
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
 
-  '@inquirer/type@3.0.2(@types/node@22.12.0)':
+  '@inquirer/type@3.0.2(@types/node@22.13.1)':
     dependencies:
-      '@types/node': 22.12.0
+      '@types/node': 22.13.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6176,7 +6185,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.12.0
+      '@types/node': 22.13.1
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -6224,7 +6233,7 @@ snapshots:
       yaml: 2.7.0
       yargs: 17.7.2
 
-  '@netlify/build@29.58.2(@opentelemetry/api@1.8.0)(@types/node@22.12.0)(picomatch@4.0.2)':
+  '@netlify/build@29.58.2(@opentelemetry/api@1.8.0)(@types/node@22.13.1)(picomatch@4.0.2)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
@@ -6281,7 +6290,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.4.0
       terminal-link: 3.0.0
-      ts-node: 10.9.2(@types/node@22.12.0)(typescript@5.7.2)
+      ts-node: 10.9.2(@types/node@22.13.1)(typescript@5.7.2)
       typescript: 5.7.2
       uuid: 9.0.1
       yargs: 17.7.2
@@ -6293,7 +6302,7 @@ snapshots:
       - picomatch
       - rollup
 
-  '@netlify/build@29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.12.0)(picomatch@4.0.2)':
+  '@netlify/build@29.58.9(@opentelemetry/api@1.8.0)(@types/node@22.13.1)(picomatch@4.0.2)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
@@ -6301,12 +6310,12 @@ snapshots:
       '@netlify/config': 20.21.7
       '@netlify/edge-bundler': 12.3.2(supports-color@9.4.0)
       '@netlify/framework-info': 9.9.1
-      '@netlify/functions-utils': 5.3.4(supports-color@9.4.0)
+      '@netlify/functions-utils': 5.3.5(supports-color@9.4.0)
       '@netlify/git-utils': 5.2.0
       '@netlify/opentelemetry-utils': 1.3.0(@opentelemetry/api@1.8.0)
       '@netlify/plugins-list': 6.80.0
       '@netlify/run-utils': 5.2.0
-      '@netlify/zip-it-and-ship-it': 9.42.4(supports-color@9.4.0)
+      '@netlify/zip-it-and-ship-it': 9.42.5(supports-color@9.4.0)
       '@opentelemetry/api': 1.8.0
       '@sindresorhus/slugify': 2.2.1
       ansi-escapes: 6.2.1
@@ -6345,12 +6354,12 @@ snapshots:
       resolve: 2.0.0-next.5
       rfdc: 1.4.1
       safe-json-stringify: 1.2.0
-      semver: 7.6.3
+      semver: 7.7.1
       string-width: 5.1.2
       strip-ansi: 7.1.0
       supports-color: 9.4.0
       terminal-link: 3.0.0
-      ts-node: 10.9.2(@types/node@22.12.0)(typescript@5.7.3)
+      ts-node: 10.9.2(@types/node@22.13.1)(typescript@5.7.3)
       typescript: 5.7.3
       uuid: 9.0.1
       yargs: 17.7.2
@@ -6448,7 +6457,7 @@ snapshots:
       p-retry: 5.1.2
       p-wait-for: 5.0.2
       path-key: 4.0.0
-      semver: 7.6.3
+      semver: 7.7.1
       tmp-promise: 3.0.3
       urlpattern-polyfill: 8.0.2
       uuid: 9.0.1
@@ -6470,7 +6479,7 @@ snapshots:
       p-locate: 6.0.0
       process: 0.11.10
       read-package-up: 11.0.0
-      semver: 7.6.3
+      semver: 7.7.1
 
   '@netlify/functions-utils@5.3.2(supports-color@9.4.0)':
     dependencies:
@@ -6482,9 +6491,9 @@ snapshots:
       - rollup
       - supports-color
 
-  '@netlify/functions-utils@5.3.4(supports-color@9.4.0)':
+  '@netlify/functions-utils@5.3.5(supports-color@9.4.0)':
     dependencies:
-      '@netlify/zip-it-and-ship-it': 9.42.4(supports-color@9.4.0)
+      '@netlify/zip-it-and-ship-it': 9.42.5(supports-color@9.4.0)
       cpy: 9.0.1
       path-exists: 5.0.0
     transitivePeerDependencies:
@@ -6589,6 +6598,11 @@ snapshots:
       '@netlify/node-cookies': 0.1.0
       urlpattern-polyfill: 8.0.2
 
+  '@netlify/serverless-functions-api@1.33.0':
+    dependencies:
+      '@netlify/node-cookies': 0.1.0
+      urlpattern-polyfill: 8.0.2
+
   '@netlify/zip-it-and-ship-it@9.42.2(supports-color@9.4.0)':
     dependencies:
       '@babel/parser': 7.26.5
@@ -6630,12 +6644,12 @@ snapshots:
       - rollup
       - supports-color
 
-  '@netlify/zip-it-and-ship-it@9.42.4(supports-color@9.4.0)':
+  '@netlify/zip-it-and-ship-it@9.42.5(supports-color@9.4.0)':
     dependencies:
       '@babel/parser': 7.26.7
       '@babel/types': 7.26.5
       '@netlify/binary-info': 1.0.0
-      '@netlify/serverless-functions-api': 1.32.0
+      '@netlify/serverless-functions-api': 1.33.0
       '@vercel/nft': 0.27.7(supports-color@9.4.0)
       archiver: 7.0.1
       common-path-prefix: 3.0.0
@@ -6659,7 +6673,7 @@ snapshots:
       precinct: 11.0.5(supports-color@9.4.0)
       require-package-name: 2.0.1
       resolve: 2.0.0-next.5
-      semver: 7.6.3
+      semver: 7.7.1
       tmp-promise: 3.0.3
       toml: 3.0.0
       unixify: 1.0.0
@@ -6960,7 +6974,7 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@22.12.0':
+  '@types/node@22.13.1':
     dependencies:
       undici-types: 6.20.0
 
@@ -9327,12 +9341,12 @@ snapshots:
       run-async: 2.4.1
       rxjs: 6.6.7
 
-  inquirer@12.3.0(@types/node@22.12.0):
+  inquirer@12.3.0(@types/node@22.13.1):
     dependencies:
-      '@inquirer/core': 10.1.4(@types/node@22.12.0)
-      '@inquirer/prompts': 7.2.3(@types/node@22.12.0)
-      '@inquirer/type': 3.0.2(@types/node@22.12.0)
-      '@types/node': 22.12.0
+      '@inquirer/core': 10.1.4(@types/node@22.13.1)
+      '@inquirer/prompts': 7.2.3(@types/node@22.13.1)
+      '@inquirer/type': 3.0.2(@types/node@22.13.1)
+      '@types/node': 22.13.1
       ansi-escapes: 4.3.2
       mute-stream: 2.0.0
       run-async: 3.0.0
@@ -9824,7 +9838,7 @@ snapshots:
       jest-validate: 27.5.1
       map-obj: 5.0.2
       moize: 6.1.6
-      semver: 7.6.3
+      semver: 7.7.1
 
   log-symbols@6.0.0:
     dependencies:
@@ -10039,12 +10053,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@18.0.1(@types/node@22.12.0)(picomatch@4.0.2):
+  netlify-cli@18.0.1(@types/node@22.13.1)(picomatch@4.0.2):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 8.1.0
-      '@netlify/build': 29.58.2(@opentelemetry/api@1.8.0)(@types/node@22.12.0)(picomatch@4.0.2)
+      '@netlify/build': 29.58.2(@opentelemetry/api@1.8.0)(@types/node@22.13.1)(picomatch@4.0.2)
       '@netlify/build-info': 8.0.0
       '@netlify/config': 20.21.2
       '@netlify/edge-bundler': 12.3.2(supports-color@9.4.0)
@@ -10275,7 +10289,7 @@ snapshots:
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.6.3
+      semver: 7.7.1
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -10905,7 +10919,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  release-it@18.1.2(@types/node@22.12.0)(typescript@5.7.3):
+  release-it@18.1.2(@types/node@22.13.1)(typescript@5.7.3):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 21.0.2
@@ -10916,7 +10930,7 @@ snapshots:
       execa: 9.5.2
       git-url-parse: 16.0.0
       globby: 14.0.2
-      inquirer: 12.3.0(@types/node@22.12.0)
+      inquirer: 12.3.0(@types/node@22.13.1)
       issue-parser: 7.0.1
       lodash: 4.17.21
       mime-types: 2.1.35
@@ -11065,6 +11079,8 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.6.3: {}
+
+  semver@7.7.1: {}
 
   send@0.19.0:
     dependencies:
@@ -11576,14 +11592,14 @@ snapshots:
 
   triple-beam@1.4.1: {}
 
-  ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.2):
+  ts-node@10.9.2(@types/node@22.13.1)(typescript@5.7.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.12.0
+      '@types/node': 22.13.1
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -11594,14 +11610,14 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3):
+  ts-node@10.9.2(@types/node@22.13.1)(typescript@5.7.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.12.0
+      '@types/node': 22.13.1
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
