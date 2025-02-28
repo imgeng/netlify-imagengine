@@ -59,7 +59,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "execa": "^9.0.0",
     "globals": "^16.0.0",
-    "netlify-cli": "^18.0.0",
+    "netlify-cli": "^19.0.0",
     "prettier": "^3.0.0",
     "release-it": "^18.0.0"
   },
