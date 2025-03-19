@@ -47,7 +47,7 @@
     "@eslint/compat": "^1.2.3",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.15.0",
-    "@netlify/build": "^29.0.0",
+    "@netlify/build": "^30.0.0",
     "ava": "^6.0.0",
     "cross-env": "^7.0.2",
     "eslint": "^9.0.0",
