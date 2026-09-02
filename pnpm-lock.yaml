@@ -16,14 +16,14 @@ importers:
         version: 11.0.1
       jsdom:
         specifier: ^26.0.0
-        version: 26.0.0
+        version: 26.0.0(supports-color@9.4.0)
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.3
-        version: 1.2.5(eslint@9.20.1(jiti@2.4.2))
+        version: 1.2.5(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       '@eslint/eslintrc':
         specifier: ^3.2.0
-        version: 3.3.0
+        version: 3.3.7(supports-color@9.4.0)
       '@eslint/js':
         specifier: ^9.15.0
         version: 9.20.0
@@ -32,28 +32,28 @@ importers:
         version: 30.0.4(@opentelemetry/api@1.8.0)(@types/node@22.13.11)(picomatch@4.0.2)
       ava:
         specifier: ^6.0.0
-        version: 6.2.0
+        version: 6.2.0(supports-color@9.4.0)
       cross-env:
         specifier: ^7.0.2
         version: 7.0.3
       eslint:
         specifier: ^9.0.0
-        version: 9.20.1(jiti@2.4.2)
+        version: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
       eslint-config-prettier:
         specifier: ^10.0.0
-        version: 10.1.1(eslint@9.20.1(jiti@2.4.2))
+        version: 10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       eslint-formatter-codeframe:
         specifier: ^7.32.1
         version: 7.32.1
       eslint-plugin-import:
         specifier: ^2.22.1
-        version: 2.31.0(eslint@9.20.1(jiti@2.4.2))
+        version: 2.31.0(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(supports-color@9.4.0)
       eslint-plugin-n:
         specifier: ^17.0.0
-        version: 17.15.1(eslint@9.20.1(jiti@2.4.2))
+        version: 17.15.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       eslint-plugin-prettier:
         specifier: ^5.0.0
-        version: 5.2.3(eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)))(eslint@9.20.1(jiti@2.4.2))(prettier@3.4.2)
+        version: 5.2.3(eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)))(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(prettier@3.4.2)
       execa:
         specifier: ^9.0.0
         version: 9.5.2
@@ -62,13 +62,13 @@ importers:
         version: 16.0.0
       netlify-cli:
         specifier: ^18.0.0
-        version: 18.0.1(@types/node@22.13.11)(picomatch@4.0.2)
+        version: 18.0.1(@types/node@22.13.11)(picomatch@4.0.2)(supports-color@9.4.0)
       prettier:
         specifier: ^3.0.0
         version: 3.4.2
       release-it:
         specifier: ^18.0.0
-        version: 18.1.2(@types/node@22.13.11)(typescript@5.7.3)
+        version: 18.1.2(@types/node@22.13.11)(supports-color@9.4.0)(typescript@5.7.3)
 
 packages:
 
@@ -497,8 +497,8 @@ packages:
     resolution: {integrity: sha512-DWUB2pksgNEb6Bz2fggIy1wh6fGgZP4Xyy/Mt0QZPiloKKXerbqq9D3SBQTlCRYOrcRPu4vuz+CGjwdfqxnoWA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/eslintrc@3.3.0':
-    resolution: {integrity: sha512-yaVPAiNAalnCZedKLdR21GOGILMLKPyqSLWaAjQFvYA2i/ciDi8ArYVr69Anohb6cH2Ukhqti4aFnYyPm8wdwQ==}
+  '@eslint/eslintrc@3.3.7':
+    resolution: {integrity: sha512-F42g89Qd5oAWtp0k0nnSrjziAKza7w8SVT4mStc18LZMaRb4J1HQAHLCalEtDCxrTuksx7NU9qsmeLwpOfPqWw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/js@9.20.0':
@@ -1041,36 +1041,42 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.0':
     resolution: {integrity: sha512-6uHywSIzz8+vi2lAzFeltnYbdHsDm3iIB57d4g5oaB9vKwjb6N6dRIgZMujw4nm5r6v9/BQH0noq6DzHrqr2pA==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.0':
     resolution: {integrity: sha512-BfNjXwZKxBy4WibDb/LDCriWSKLz+jJRL3cM/DllnHH5QUyoiUNEp3GmL80ZqxeumoADfCCP19+qiYiC8gUBjA==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.0':
     resolution: {integrity: sha512-S1qARKOphxfiBEkwLUbHjCY9BWPdWnW9j7f7Hb2jPplu8UZ3nes7zpPOW9bkLbHRvWM0WDTsjdOTUgW0xLBN1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.0':
     resolution: {integrity: sha512-d9AOkusyXARkFD66S6zlGXyzx5RvY+chTP9Jp0ypSTC9d4lzyRs9ovGf/80VCxjKddcUvnsGwCHWuF2EoPgWjw==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.0':
     resolution: {integrity: sha512-iqOC+GoTDoFyk/VYSFHwjHhYrk8bljW6zOhPuhi5t9ulqiYq1togGJB5e3PwYVFFfeVgc6pbz3JdQyDoBszVaA==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-wasm@2.5.0':
     resolution: {integrity: sha512-Z4ouuR8Pfggk1EYYbTaIoxc+Yv4o7cGQnH0Xy8+pQ+HbiW+ZnwhcD2LPf/prfq1nIWpAxjOkQ8uSMFWMtBLiVQ==}
@@ -1365,6 +1371,9 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
+  ajv@6.15.0:
+    resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
+
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
@@ -1595,6 +1604,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
   before-after-hook@2.2.3:
     resolution: {integrity: sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==}
@@ -2006,6 +2016,7 @@ packages:
   cron-parser@4.9.0:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
+    deprecated: v4 is no longer maintained, upgrade to v5
 
   cross-env@7.0.3:
     resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
@@ -2534,6 +2545,7 @@ packages:
   eslint@9.20.1:
     resolution: {integrity: sha512-m1mM33o6dBUjxl2qb6wv6nGNwCAsns1eKtaQ4l/NPHeTvhiUPbtdfMyktxN4B3fgHIgsYh1VT3V9txblpQHq+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2993,21 +3005,23 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@11.0.1:
     resolution: {integrity: sha512-zrQDm8XPnYEKawJScsnM0QzobJxlT/kHOOlRTio8IH/GrmxRE5fjllkzdaHclIuNjUQTJYH2xHNIGfdpJkDJUw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-cache-dir@4.4.0:
     resolution: {integrity: sha512-bk0gI6IbbphRjAaCJJn5H+T/CcEck5B3a5KBO2BXSDzjFSV+API17w8GA7YPJ6IXJiasW8M0VsEIig1PCHdfOQ==}
@@ -3562,6 +3576,10 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  js-yaml@4.3.2:
+    resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
+    hasBin: true
+
   jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
 
@@ -3901,6 +3919,9 @@ packages:
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
+  minimatch@3.1.5:
+    resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
+
   minimatch@5.1.6:
     resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
     engines: {node: '>=10'}
@@ -3950,6 +3971,7 @@ packages:
 
   moize@6.1.6:
     resolution: {integrity: sha512-vSKdIUO61iCmTqhdoIDrqyrtp87nWZUmBPniNjO0fX49wEYmyDO4lvlnFXiGcaH1JLE/s/9HbiK4LSHsbiUY6Q==}
+    deprecated: This library has been deprecated in favor of micro-memoize, which as-of version 5 incorporates most of the functionality that this library offers at nearly half the size and better speed.
 
   move-file@3.1.0:
     resolution: {integrity: sha512-4aE3U7CCBWgrQlQDMq8da4woBWDGHioJFiOZ8Ie6Yq2uwYQ9V2kGhTz4x3u6Wc+OU17nw0yc3rJ/lQ4jIiPe3A==}
@@ -4030,6 +4052,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch-native@1.6.4:
     resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
@@ -4485,6 +4508,7 @@ packages:
   prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   precinct@11.0.5:
@@ -5180,6 +5204,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   temp-dir@3.0.0:
     resolution: {integrity: sha512-nHc6S/bwIilKHNRgK/3jlhDoIHcp45YgyiwcAk46Tr0LfEqGBVpmiAyuiuxeVE44m3mXnEeVhaipLOEWmH+Njw==}
@@ -5541,6 +5566,7 @@ packages:
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   v8-compile-cache-lib@3.0.1:
@@ -5584,6 +5610,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -6034,18 +6061,18 @@ snapshots:
   '@esbuild/win32-x64@0.21.2':
     optional: true
 
-  '@eslint-community/eslint-utils@4.4.1(eslint@9.20.1(jiti@2.4.2))':
+  '@eslint-community/eslint-utils@4.4.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))':
     dependencies:
-      eslint: 9.20.1(jiti@2.4.2)
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/compat@1.2.5(eslint@9.20.1(jiti@2.4.2))':
+  '@eslint/compat@1.2.5(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))':
     optionalDependencies:
-      eslint: 9.20.1(jiti@2.4.2)
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
 
-  '@eslint/config-array@0.19.2':
+  '@eslint/config-array@0.19.2(supports-color@9.4.0)':
     dependencies:
       '@eslint/object-schema': 2.1.6
       debug: 4.4.0(supports-color@9.4.0)
@@ -6061,16 +6088,16 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/eslintrc@3.3.0':
+  '@eslint/eslintrc@3.3.7(supports-color@9.4.0)':
     dependencies:
-      ajv: 6.12.6
+      ajv: 6.15.0
       debug: 4.4.0(supports-color@9.4.0)
       espree: 10.3.0
       globals: 14.0.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.0
-      minimatch: 3.1.2
+      js-yaml: 4.3.2
+      minimatch: 3.1.5
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
@@ -7151,7 +7178,7 @@ snapshots:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
 
-  '@vercel/nft@0.27.6':
+  '@vercel/nft@0.27.6(supports-color@9.4.0)':
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(supports-color@9.4.0)
       '@rollup/pluginutils': 4.2.1
@@ -7258,9 +7285,9 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  acorn-jsx@5.3.2(acorn@8.14.0):
+  acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
 
   acorn-walk@8.3.4:
     dependencies:
@@ -7272,7 +7299,7 @@ snapshots:
 
   agent-base@6.0.2(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7296,6 +7323,13 @@ snapshots:
       ajv: 8.17.1
 
   ajv@6.12.6:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-json-stable-stringify: 2.1.0
+      json-schema-traverse: 0.4.1
+      uri-js: 4.4.1
+
+  ajv@6.15.0:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
@@ -7489,9 +7523,9 @@ snapshots:
       stubborn-fs: 1.2.5
       when-exit: 2.1.4
 
-  ava@6.2.0:
+  ava@6.2.0(supports-color@9.4.0):
     dependencies:
-      '@vercel/nft': 0.27.6
+      '@vercel/nft': 0.27.6(supports-color@9.4.0)
       acorn: 8.14.0
       acorn-walk: 8.3.4
       ansi-styles: 6.2.1
@@ -7614,11 +7648,11 @@ snapshots:
 
   blueimp-md5@2.19.0: {}
 
-  body-parser@1.20.3:
+  body-parser@1.20.3(supports-color@9.4.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@9.4.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -8121,13 +8155,17 @@ snapshots:
     dependencies:
       time-zone: 1.0.0
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@9.4.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 9.4.0
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@9.4.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 9.4.0
 
   debug@4.3.7(supports-color@9.4.0):
     dependencies:
@@ -8509,56 +8547,56 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-compat-utils@0.5.1(eslint@9.20.1(jiti@2.4.2)):
+  eslint-compat-utils@0.5.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)):
     dependencies:
-      eslint: 9.20.1(jiti@2.4.2)
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
       semver: 7.6.3
 
-  eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)):
+  eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)):
     dependencies:
-      eslint: 9.20.1(jiti@2.4.2)
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
 
   eslint-formatter-codeframe@7.32.1:
     dependencies:
       '@babel/code-frame': 7.12.11
       chalk: 4.1.2
 
-  eslint-import-resolver-node@0.3.9:
+  eslint-import-resolver-node@0.3.9(supports-color@9.4.0):
     dependencies:
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@9.4.0)
       is-core-module: 2.15.1
       resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(eslint-import-resolver-node@0.3.9)(eslint@9.20.1(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(eslint-import-resolver-node@0.3.9(supports-color@9.4.0))(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@9.4.0)
     optionalDependencies:
-      eslint: 9.20.1(jiti@2.4.2)
-      eslint-import-resolver-node: 0.3.9
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
+      eslint-import-resolver-node: 0.3.9(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-es-x@7.8.0(eslint@9.20.1(jiti@2.4.2)):
+  eslint-plugin-es-x@7.8.0(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       '@eslint-community/regexpp': 4.12.1
-      eslint: 9.20.1(jiti@2.4.2)
-      eslint-compat-utils: 0.5.1(eslint@9.20.1(jiti@2.4.2))
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
+      eslint-compat-utils: 0.5.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
 
-  eslint-plugin-import@2.31.0(eslint@9.20.1(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
       array.prototype.flat: 1.3.2
       array.prototype.flatmap: 1.3.2
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@9.4.0)
       doctrine: 2.1.0
-      eslint: 9.20.1(jiti@2.4.2)
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(eslint-import-resolver-node@0.3.9)(eslint@9.20.1(jiti@2.4.2))
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
+      eslint-import-resolver-node: 0.3.9(supports-color@9.4.0)
+      eslint-module-utils: 2.12.0(eslint-import-resolver-node@0.3.9(supports-color@9.4.0))(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(supports-color@9.4.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -8574,26 +8612,26 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-n@17.15.1(eslint@9.20.1(jiti@2.4.2)):
+  eslint-plugin-n@17.15.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       enhanced-resolve: 5.18.0
-      eslint: 9.20.1(jiti@2.4.2)
-      eslint-plugin-es-x: 7.8.0(eslint@9.20.1(jiti@2.4.2))
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
+      eslint-plugin-es-x: 7.8.0(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       get-tsconfig: 4.8.1
       globals: 15.14.0
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.6.3
 
-  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)))(eslint@9.20.1(jiti@2.4.2))(prettier@3.4.2):
+  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0)))(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(prettier@3.4.2):
     dependencies:
-      eslint: 9.20.1(jiti@2.4.2)
+      eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
       prettier: 3.4.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.2
     optionalDependencies:
-      eslint-config-prettier: 10.1.1(eslint@9.20.1(jiti@2.4.2))
+      eslint-config-prettier: 10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
 
   eslint-scope@8.2.0:
     dependencies:
@@ -8604,13 +8642,13 @@ snapshots:
 
   eslint-visitor-keys@4.2.0: {}
 
-  eslint@9.20.1(jiti@2.4.2):
+  eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       '@eslint-community/regexpp': 4.12.1
-      '@eslint/config-array': 0.19.2
+      '@eslint/config-array': 0.19.2(supports-color@9.4.0)
       '@eslint/core': 0.11.0
-      '@eslint/eslintrc': 3.3.0
+      '@eslint/eslintrc': 3.3.7(supports-color@9.4.0)
       '@eslint/js': 9.20.0
       '@eslint/plugin-kit': 0.2.5
       '@humanfs/node': 0.16.6
@@ -8647,8 +8685,8 @@ snapshots:
 
   espree@10.3.0:
     dependencies:
-      acorn: 8.14.0
-      acorn-jsx: 5.3.2(acorn@8.14.0)
+      acorn: 8.14.1
+      acorn-jsx: 5.3.2(acorn@8.14.1)
       eslint-visitor-keys: 4.2.0
 
   esprima@4.0.1: {}
@@ -8744,21 +8782,21 @@ snapshots:
     dependencies:
       on-headers: 1.0.2
 
-  express@4.21.2:
+  express@4.21.2(supports-color@9.4.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.3
+      body-parser: 1.20.3(supports-color@9.4.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.1
       cookie-signature: 1.0.6
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@9.4.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.1
+      finalhandler: 1.3.1(supports-color@9.4.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.3
@@ -8770,8 +8808,8 @@ snapshots:
       qs: 6.13.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.0
-      serve-static: 1.16.2
+      send: 0.19.0(supports-color@9.4.0)
+      serve-static: 1.16.2(supports-color@9.4.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -8795,9 +8833,9 @@ snapshots:
       iconv-lite: 0.4.24
       tmp: 0.0.33
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -8957,9 +8995,9 @@ snapshots:
 
   filter-obj@5.1.0: {}
 
-  finalhandler@1.3.1:
+  finalhandler@1.3.1(supports-color@9.4.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@9.4.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -9013,7 +9051,7 @@ snapshots:
     dependencies:
       from2: 2.3.0
 
-  follow-redirects@1.15.9(debug@4.3.7):
+  follow-redirects@1.15.9(debug@4.3.7(supports-color@9.4.0)):
     optionalDependencies:
       debug: 4.3.7(supports-color@9.4.0)
 
@@ -9153,7 +9191,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  get-uri@6.0.4:
+  get-uri@6.0.4(supports-color@9.4.0):
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
@@ -9381,27 +9419,27 @@ snapshots:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@9.4.0):
     dependencies:
       agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
-  http-proxy-middleware@2.0.7(debug@4.3.7):
+  http-proxy-middleware@2.0.7(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
       '@types/http-proxy': 1.17.15
-      http-proxy: 1.18.1(debug@4.3.7)
+      http-proxy: 1.18.1(debug@4.3.7(supports-color@9.4.0))
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
       micromatch: 4.0.8
     transitivePeerDependencies:
       - debug
 
-  http-proxy@1.18.1(debug@4.3.7):
+  http-proxy@1.18.1(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.9(debug@4.3.7)
+      follow-redirects: 1.15.9(debug@4.3.7(supports-color@9.4.0))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -9416,14 +9454,14 @@ snapshots:
   https-proxy-agent@5.0.1(supports-color@9.4.0):
     dependencies:
       agent-base: 6.0.2(supports-color@9.4.0)
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@9.4.0):
     dependencies:
       agent-base: 7.1.3
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9789,17 +9827,21 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  js-yaml@4.3.2:
+    dependencies:
+      argparse: 2.0.1
+
   jsbn@1.1.0: {}
 
-  jsdom@26.0.0:
+  jsdom@26.0.0(supports-color@9.4.0):
     dependencies:
       cssstyle: 4.2.1
       data-urls: 5.0.0
       decimal.js: 10.4.3
       form-data: 4.0.1
       html-encoding-sniffer: 4.0.0
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      http-proxy-agent: 7.0.2(supports-color@9.4.0)
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       is-potential-custom-element-name: 1.0.1
       nwsapi: 2.2.16
       parse5: 7.2.1
@@ -10117,6 +10159,10 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.11
 
+  minimatch@3.1.5:
+    dependencies:
+      brace-expansion: 1.1.11
+
   minimatch@5.1.6:
     dependencies:
       brace-expansion: 2.0.1
@@ -10150,7 +10196,7 @@ snapshots:
 
   mlly@1.7.4:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
       pathe: 2.0.1
       pkg-types: 1.3.1
       ufo: 1.5.4
@@ -10196,7 +10242,7 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@18.0.1(@types/node@22.13.11)(picomatch@4.0.2):
+  netlify-cli@18.0.1(@types/node@22.13.11)(picomatch@4.0.2)(supports-color@9.4.0):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
@@ -10238,9 +10284,9 @@ snapshots:
       envinfo: 7.14.0
       etag: 1.8.1
       execa: 5.1.1
-      express: 4.21.2
+      express: 4.21.2(supports-color@9.4.0)
       express-logging: 1.1.1
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@9.4.0)
       fastest-levenshtein: 1.0.16
       fastify: 4.28.1
       find-up: 7.0.0
@@ -10253,9 +10299,9 @@ snapshots:
       git-repo-info: 2.1.1
       gitconfiglocal: 2.1.0
       hasha: 5.2.2
-      http-proxy: 1.18.1(debug@4.3.7)
-      http-proxy-middleware: 2.0.7(debug@4.3.7)
-      https-proxy-agent: 7.0.6
+      http-proxy: 1.18.1(debug@4.3.7(supports-color@9.4.0))
+      http-proxy-middleware: 2.0.7(debug@4.3.7(supports-color@9.4.0))
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       inquirer: 6.5.2
       inquirer-autocomplete-prompt: 1.4.0(inquirer@6.5.2)
       ipx: 2.1.0(@netlify/blobs@8.1.0)
@@ -10293,7 +10339,7 @@ snapshots:
       semver: 7.6.3
       source-map-support: 0.5.21
       strip-ansi-control-characters: 2.0.0
-      tabtab: 3.0.2
+      tabtab: 3.0.2(supports-color@9.4.0)
       tempy: 3.1.0
       terminal-link: 3.0.0
       through2-filter: 4.0.0
@@ -10304,7 +10350,7 @@ snapshots:
       unixify: 1.0.0
       update-notifier: 7.3.1
       uuid: 9.0.1
-      wait-port: 1.1.0
+      wait-port: 1.1.0(supports-color@9.4.0)
       write-file-atomic: 5.0.1
       ws: 8.18.0
       zod: 3.23.8
@@ -10662,16 +10708,16 @@ snapshots:
     dependencies:
       p-timeout: 6.1.4
 
-  pac-proxy-agent@7.1.0:
+  pac-proxy-agent@7.1.0(supports-color@9.4.0):
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
-      get-uri: 6.0.4
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      get-uri: 6.0.4(supports-color@9.4.0)
+      http-proxy-agent: 7.0.2(supports-color@9.4.0)
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       pac-resolver: 7.0.1
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10911,16 +10957,16 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
-  proxy-agent@6.5.0:
+  proxy-agent@6.5.0(supports-color@9.4.0):
     dependencies:
       agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      http-proxy-agent: 7.0.2(supports-color@9.4.0)
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       lru-cache: 7.18.3
-      pac-proxy-agent: 7.1.0
+      pac-proxy-agent: 7.1.0(supports-color@9.4.0)
       proxy-from-env: 1.1.0
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11062,7 +11108,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  release-it@18.1.2(@types/node@22.13.11)(typescript@5.7.3):
+  release-it@18.1.2(@types/node@22.13.11)(supports-color@9.4.0)(typescript@5.7.3):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 21.0.2
@@ -11081,7 +11127,7 @@ snapshots:
       open: 10.1.0
       ora: 8.1.1
       os-name: 6.0.0
-      proxy-agent: 6.5.0
+      proxy-agent: 6.5.0(supports-color@9.4.0)
       semver: 7.6.3
       shelljs: 0.8.5
       undici: 6.21.1
@@ -11225,9 +11271,9 @@ snapshots:
 
   semver@7.7.1: {}
 
-  send@0.19.0:
+  send@0.19.0(supports-color@9.4.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@9.4.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -11247,12 +11293,12 @@ snapshots:
     dependencies:
       type-fest: 0.13.1
 
-  serve-static@1.16.2:
+  serve-static@1.16.2(supports-color@9.4.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.0
+      send: 0.19.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11365,7 +11411,7 @@ snapshots:
 
   smart-buffer@4.2.0: {}
 
-  socks-proxy-agent@8.0.5:
+  socks-proxy-agent@8.0.5(supports-color@9.4.0):
     dependencies:
       agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
@@ -11588,9 +11634,9 @@ snapshots:
 
   system-architecture@0.1.0: {}
 
-  tabtab@3.0.2:
+  tabtab@3.0.2(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       es6-promisify: 6.1.1
       inquirer: 6.5.2
       minimist: 1.2.8
@@ -11983,11 +12029,11 @@ snapshots:
     dependencies:
       xml-name-validator: 5.0.0
 
-  wait-port@1.1.0:
+  wait-port@1.1.0(supports-color@9.4.0):
     dependencies:
       chalk: 4.1.2
       commander: 9.5.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
