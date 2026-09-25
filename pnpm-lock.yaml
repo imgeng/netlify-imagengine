@@ -44,7 +44,7 @@ importers:
         version: 10.1.1(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))
       eslint-formatter-codeframe:
         specifier: ^7.32.1
-        version: 7.32.1
+        version: 7.32.2
       eslint-plugin-import:
         specifier: ^2.22.1
         version: 2.31.0(eslint@9.20.1(jiti@2.4.2)(supports-color@9.4.0))(supports-color@9.4.0)
@@ -84,10 +84,6 @@ packages:
 
   '@babel/helper-string-parser@7.25.9':
     resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-validator-identifier@7.24.7':
-    resolution: {integrity: sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.25.9':
@@ -2470,8 +2466,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-formatter-codeframe@7.32.1:
-    resolution: {integrity: sha512-DK/3Q3+zVKq/7PdSYiCxPrsDF8H/TRMK5n8Hziwr4IMkMy+XiKSwbpj25AdajS63I/B61Snetq4uVvX9fOLyAg==}
+  eslint-formatter-codeframe@7.32.2:
+    resolution: {integrity: sha512-0X5vEQeNniQRbGm+ec9Ow6LWj4RqZEcjPSfZ+t8qLPWqwyaBa67GrNetTxd0aYKoHrpbZeoRRlvA2gz9HujiEg==}
     engines: {node: ^10.12.0 || >=12.0.0}
 
   eslint-import-resolver-node@0.3.9:
@@ -4461,9 +4457,6 @@ packages:
   pend@1.2.0:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
 
-  picocolors@1.1.0:
-    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -5814,16 +5807,14 @@ snapshots:
 
   '@babel/helper-string-parser@7.25.9': {}
 
-  '@babel/helper-validator-identifier@7.24.7': {}
-
   '@babel/helper-validator-identifier@7.25.9': {}
 
   '@babel/highlight@7.24.7':
     dependencies:
-      '@babel/helper-validator-identifier': 7.24.7
+      '@babel/helper-validator-identifier': 7.25.9
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.1.0
+      picocolors: 1.1.1
 
   '@babel/parser@7.26.10':
     dependencies:
@@ -8565,7 +8556,7 @@ snapshots:
     dependencies:
       eslint: 9.20.1(jiti@2.4.2)(supports-color@9.4.0)
 
-  eslint-formatter-codeframe@7.32.1:
+  eslint-formatter-codeframe@7.32.2:
     dependencies:
       '@babel/code-frame': 7.12.11
       chalk: 4.1.2
@@ -10835,8 +10826,6 @@ snapshots:
   peek-readable@5.3.1: {}
 
   pend@1.2.0: {}
-
-  picocolors@1.1.0: {}
 
   picocolors@1.1.1: {}
 
